@@ -8,7 +8,7 @@ A comprehensive list of tasks performed across PhD research projects, organized 
 
 ### Study Design & IRB
 - Designed a three-condition mixed-methods randomized experiment comparing instructional approaches for teaching code tracing to introductory CS students (CS 105 at UIUC)
-- Prepared and submitted IRB application (IRB25-1481); obtained approval for ~120 participants
+- Prepared and submitted IRB application (IRB25-1481); obtained approval for ~30-100 participants (still on-going)
 - Designed consent forms and recruitment materials
 
 ### Curriculum Development
