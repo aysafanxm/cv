@@ -158,11 +158,52 @@ Specialist in Mathematics and Its Applications in Finance and Economics, Major i
 
 \entrydate{Graduate Research Assistant}{Sep 2019 -- Present}
 \entrysub{University of Illinois Urbana-Champaign, HEDS Lab (Advisor: Dr.\ Luc Paquette)}
+
+\vspace{2pt}
+\noindent\textit{Dissertation: Comparative Study of Code-Tracing Learning Approaches (in progress)}
 \begin{itemize}[leftmargin=14pt, nosep, topsep=2pt]
-  \item Designing and conducting a mixed-methods randomized experiment comparing instructional approaches for teaching code tracing with automated LLM-generated feedback
-  \item Developed LLM-based filtering to classify rare debugging strategies from interaction logs, reducing manual annotation effort by \(\sim\)75\% (ICQE 2024, JEDM under review)
-  \item Investigated the use of LLMs to generate code-tracing questions and code comments for novice programmers (EMNLP 2023, SIGCSE 2024)
-  \item Contributed to lab research analyzing longitudinal programming log data, including feature design and interpretation for studies on debugging and learner performance
+  \item Designed a three-condition mixed-methods randomized experiment (IRB-approved) comparing instructional approaches for teaching code tracing to introductory CS students
+  \item Developed a three-stage progressive curriculum (How/Why/What to Trace) with 10+ scaffolded learning activities covering tracing tables, discrepancy identification, and strategic variable selection
+  \item Built and self-hosted an LLM-powered feedback website that provides automated, context-aware tutoring responses to students during learning activities
+  \item Implemented the end-to-end learning activity on PrairieLearn, integrating pre/post-tests, the progressive curriculum, and the LLM feedback system for data collection
+  \item Designed pre-test, post-test, and survey instruments; managing participant recruitment, consent, and data collection within a single-semester timeline
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textit{LLM-Based Classification of Debugging Strategies (ICQE 2024; JEDM under review)}
+\begin{itemize}[leftmargin=14pt, nosep, topsep=2pt]
+  \item Conducted a literature review identifying 22 candidate debugging strategies, then refined them through expert discussion into a 10-strategy codebook (4 retained for final annotation)
+  \item Led a multi-phase annotation effort (2{,}350 episodes) with iterative inter-rater reliability calibration across four phases, achieving \(\kappa > 0.75\) for all retained strategies
+  \item Designed an LLM-based filtering pipeline using GPT-4o to inflate rare strategy occurrence from \(\sim\)4\% to 27--40\% in annotation samples, reducing manual annotation effort by \(\sim\)75\%
+  \item Built a custom browser-based annotation tool displaying side-by-side code diffs with visual highlighting and error feedback for efficient expert labeling
+  \item Benchmarked seven LLMs (six open-source + Claude Sonnet 4.5) on multi-label debugging strategy classification using zero-shot prompting with structured JSON output
+  \item Developed four structurally distinct prompt strategies through iterative error analysis on 1{,}255 development episodes, incorporating hierarchical expert decision flows and contrastive definitions
+  \item Fine-tuned Qwen3 models (0.6B--14B) using Self-Taught Reasoner (STaR) with iterative self-improvement over 10 iterations; also fine-tuned BERT, RoBERTa, and ModernBERT as encoder baselines
+  \item Evaluated all models on a held-out 995-episode set using macro-averaged F1, Cohen's \(\kappa\), bootstrap confidence intervals, McNemar's tests, and Wilcoxon signed-rank tests (computed via scikit-learn)
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textit{LLM-Generated Code-Tracing Questions (EMNLP 2023, SIGCSE 2024)}
+\begin{itemize}[leftmargin=14pt, nosep, topsep=2pt]
+  \item Curated a dataset of 176 code snippet--question pairs from CSAwesome and YouTube, pairing human-authored tracing questions with LLM-generated counterparts
+  \item Engineered and iteratively refined prompts for GPT-3.5-turbo and GPT-4, comparing zero-shot and few-shot generation; used BERTScore to assess question diversity and select the final model/approach
+  \item Designed a human evaluation framework with five criteria (relevance, clarity, difficulty, code relevance, authorship discernibility) and coordinated blind evaluations by four expert evaluators across 176 question pairs
+  \item Conducted Mann-Whitney U tests showing LLM-generated questions achieved comparable median quality to human-authored ones; built confusion matrices revealing 56\% of GPT-4 questions were mistaken as human-created
+  \item Identified quality features from literature (complexity, guessability, reverse tracing) and designed expert-guided prompts incorporating chain-of-thought self-selection, yielding improved complexity (3.5 vs.\ 2.5) and reverse-tracing coverage (83\% vs.\ 0\%)
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textit{LLM-Generated Code Comments for Novice Programmers (LLM4Ed at AIED 2024)}
+\begin{itemize}[leftmargin=14pt, nosep, topsep=2pt]
+  \item Designed prompts for GPT-4, GPT-3.5-Turbo, and Llama2 to generate instructional code comments on 30 LeetCode Java solutions, benchmarked against expert-written comments
+  \item Developed a two-phase evaluation codebook: first-round Likert-scale criteria (8 dimensions) and refined second-round binary criteria with a ``friendly tutor'' qualitative measure; coordinated blind expert evaluations
+  \item Performed Kruskal-Wallis H tests, chi-square analyses, and Mann-Whitney U tests, finding GPT-4 achieved comparable quality to human experts with no statistically significant differences
+\end{itemize}
+
+\vspace{2pt}
+\noindent\textit{Lab Research on Novice Programming Behaviors}
+\begin{itemize}[leftmargin=14pt, nosep, topsep=2pt]
+  \item Contributed to lab research analyzing longitudinal programming log data, including feature design and interpretation for studies on debugging, learner persistence, and performance modeling
 \end{itemize}
 \vspace{3pt}
 

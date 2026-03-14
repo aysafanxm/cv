@@ -1,0 +1,8 @@
+# Ignore PDFs (reference papers, not source)
+*.pdf
+
+# Ignore dissertation folder
+dissertation/
+
+# Ignore macOS files
+.DS_Store
